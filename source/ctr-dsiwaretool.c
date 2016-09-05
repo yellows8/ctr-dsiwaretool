@@ -204,6 +204,7 @@ int main(int argc, char **argv)
 	if((filestat.st_size < 0x400) || (filestat.st_size > 0x4e0))
 	{
 		printf("Invalid footer.\n");
+		return 1;
 	}
 
 	memset(footer, 0, 0x4e0);
